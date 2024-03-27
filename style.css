@@ -181,6 +181,7 @@ section {
 }
 
 #about {
+    /* height: 100vh; */
     flex-direction: row-reverse;
     align-items: start;
 

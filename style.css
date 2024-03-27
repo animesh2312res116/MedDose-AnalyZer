@@ -181,7 +181,6 @@ section {
 }
 
 #about {
-    /* height: 100vh; */
     flex-direction: row-reverse;
     align-items: start;
 
@@ -196,8 +195,8 @@ section {
     }
 
     & .details {
-        width: 70%;
-        height: 80%;
+        width: fit-content;
+        height: fit-content;
         border-top-left-radius: 10rem;
         border-bottom-left-radius: 10rem;
         padding: 5rem 10rem;
@@ -297,4 +296,4 @@ footer {
         display: none;
 
     }
-}
+z}

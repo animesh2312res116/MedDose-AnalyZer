@@ -183,11 +183,15 @@ section {
 .sections{
     /* height: 100vh; */
     flex-direction: row-reverse;
-    align-items: start;
+    align-items: center;
 
     & .section-two-right {
         width: 50%;
         height: 100%;
+        overflow: hidden;
+        display: grid;
+        align-items: center;
+        justify-items: end;
 
         & img {
             width: 90%;
@@ -303,30 +307,40 @@ footer {
     flex-direction: row;
     height: 80vh;
 
-    & img{
-        width: 80%;
+    & .section-two-right {
+        overflow: hidden;
+        display: grid;
+        align-items: center;
+        justify-items: end;
+
+        & img {
+            width: 80%;
+            aspect-ratio: 1;
+        }
     }
 
+
     & .details{
+        width: 70%;
         border-radius: 0;
         border-top-right-radius: 10rem ;
         border-bottom-right-radius: 10rem ;
 
         & input , textarea{
+            padding: 0  2rem;
             outline: none;
             border: 0;
             border-radius: 2rem;
         }
 
         & input {
-            width: 50rem;
+            /* width: 50rem; */
             height: 4.5rem;
             border-radius: 5rem;
         }
 
 
         & input::placeholder , textarea::placeholder{
-            padding: 0 2rem;
             font-size: 1.8rem;
         }
 

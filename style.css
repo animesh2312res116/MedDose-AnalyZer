@@ -180,8 +180,9 @@ section {
 
 }
 
-.sections{
-    /* height: 100vh; */
+.sections {
+    height: fit-content;
+    padding: 5rem 0;
     flex-direction: row-reverse;
     align-items: center;
 
@@ -240,19 +241,21 @@ footer {
     background-color: var(--firstcolor);
     display: grid;
     padding: 0 5rem;
-    grid-template-columns: 1fr  3fr ;
+    grid-template-columns: 1fr 3fr;
 
 
     & .logo {
         line-height: 2rem;
         display: grid;
         place-content: center;
+
         /* border-right: 2px solid black ; */
         & h1 {
             color: var(--secondcolor);
         }
     }
-    & .suscribe{
+
+    & .suscribe {
         display: grid;
         justify-items: end;
         align-items: center;
@@ -264,25 +267,26 @@ footer {
             height: 4.5rem;
             background-color: transparent;
             border: 0;
-            border-bottom: 2px solid var(--thirdcolor) ;
+            border-bottom: 2px solid var(--thirdcolor);
             transition: all .2s;
         }
 
-        & input::placeholder{
+        & input::placeholder {
             padding: 0 1rem;
             font-size: 1.5rem;
             font-weight: 500;
             color: var(--secondcolor);
         }
 
-        & input:focus{
+        & input:focus {
             border-bottom: 3px solid var(--thirdcolor);
             outline: none;
         }
+
         & button {
             width: 15rem;
             height: 4.5rem;
-            border-radius:2rem;
+            border-radius: 2rem;
             border: 2px solid var(--thirdcolor);
             background-color: var(--thirdcolor);
             color: var(--secondcolor);
@@ -291,19 +295,19 @@ footer {
             transition: all .3s;
         }
 
-        & button:hover{
+        & button:hover {
             width: 15.2rem;
             height: 4.7rem;
         }
     }
 
-    & .footer-right{
+    & .footer-right {
         display: none;
 
     }
 }
 
-#contact{
+#contact {
     flex-direction: row;
     height: 80vh;
 
@@ -320,14 +324,15 @@ footer {
     }
 
 
-    & .details{
+    & .details {
         width: 70%;
         border-radius: 0;
-        border-top-right-radius: 10rem ;
-        border-bottom-right-radius: 10rem ;
+        border-top-right-radius: 10rem;
+        border-bottom-right-radius: 10rem;
 
-        & input , textarea{
-            padding: 0  2rem;
+        & input,
+        textarea {
+            padding: 0 2rem;
             outline: none;
             border: 0;
             border-radius: 2rem;
@@ -340,11 +345,12 @@ footer {
         }
 
 
-        & input::placeholder , textarea::placeholder{
+        & input::placeholder,
+        textarea::placeholder {
             font-size: 1.8rem;
         }
 
-        & button{
+        & button {
             align-self: flex-end;
             margin-right: 1rem;
             width: 20rem;
@@ -358,11 +364,56 @@ footer {
             font-weight: 600;
         }
 
-        & button:hover{
+        & button:hover {
             width: 20.2rem;
             height: 4.7rem;
         }
 
     }
 
+}
+
+.dev {
+    width: 100%;
+    height: fit-content;
+    padding: 5rem;
+
+
+    & h1 {
+        width: fit-content;
+        font-size: 4.8rem;
+        border-bottom: 4px solid var(--firstcolor);
+        color: var(--firstcolor);
+    }
+
+    & .card-container{
+        width: 100%;
+        height: 100%;
+        padding: 5rem;
+        padding-top: 10rem;
+
+        & .card {
+            width: 250px;
+            aspect-ratio: .8;
+            padding: 2rem;
+            box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+
+            & img{
+                width: 10rem;
+                aspect-ratio: 1;
+                border-radius: 50%;
+                object-fit: contain ;
+                position: absolute;
+                left: 50%;
+                top: 0;
+                border: 5px solid var(--firstcolor);
+                transform: translate(-50% , -50%);
+            }
+        }
+    }
 }

@@ -11,3 +11,11 @@ prev.addEventListener('click', () => {
     const cont = document.querySelector('.card-container')
     cont.scrollBy(-400, 0);
 })
+
+const about = ()=>{
+    window.location.href = "./#about"
+}
+
+const services = ()=>{
+    window.location.href = "./services.html"
+}

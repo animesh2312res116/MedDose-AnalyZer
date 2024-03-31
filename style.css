@@ -142,6 +142,7 @@ section {
                 font-weight: 300;
                 border: .2rem solid var(--secondcolor);
                 transition: all .3s;
+                cursor: pointer;
             }
 
             & .active {
@@ -403,12 +404,14 @@ footer {
         scroll-snap-type: mandatory;
         scrollbar-width: none;
         flex-wrap: nowrap;
+        justify-content: stretch;
+        align-items: center;
 
 
         & .card {
             /* margin: 0 rem; */
             scroll-snap-align: center;
-            min-width: 250px;
+            min-width: 220px;
             aspect-ratio: .8;
             padding: 2rem;
             box-shadow: rgba(0, 0, 0, 0.24) 5px 4px 10px 8px;
@@ -419,7 +422,7 @@ footer {
             align-items: center;
             position: relative;
             border-radius: 2rem;
-            /* gap: 2rem; */
+            gap: 2rem;
             cursor: pointer;
             transition: all .3s;
 
@@ -447,14 +450,14 @@ footer {
         }
 
         & .card:hover {
-            transform: translateY(-5%);
+            box-shadow: rgba(0, 0, 0, 0.24) 5px 4px 20px 8px;   
         }
     }
 }
 
 .btn {
     font-size: 2rem;
-    width:6rem;
+    width:5rem;
     aspect-ratio: 1;
     border-radius: 50%;
     position:absolute;

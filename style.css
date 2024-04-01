@@ -392,26 +392,23 @@ footer {
     }
 
     & .card-container {
-        width: 100%;
+        width:90%;
         height: 100%;
         padding: 5rem 10rem;
         padding-top: 10rem;
+        padding-left: 1rem;
         display: flex;
-        justify-content: start;
-        align-items: center;
         gap: 5rem;
         overflow-x: scroll;
-        scroll-snap-type: mandatory;
         scrollbar-width: none;
-        flex-wrap: nowrap;
-        justify-content: stretch;
-        align-items: center;
+        /* flex-wrap: nowrap; */
+        
 
 
         & .card {
             /* margin: 0 rem; */
             scroll-snap-align: center;
-            min-width: 220px;
+            min-width: 250px;
             aspect-ratio: .8;
             padding: 2rem;
             box-shadow: rgba(0, 0, 0, 0.24) 5px 4px 10px 8px;

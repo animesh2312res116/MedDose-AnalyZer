@@ -472,3 +472,91 @@ footer {
 .nex{
     right: 0%;
 }
+
+
+/* ==============================service page ======== */
+.service-sec{
+    width: 100vw;
+    height: 80vh;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.image{
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+
+    & img{
+        transform: translateY(-2%);
+        width: 100%;
+        aspect-ratio: 1;
+    }
+}
+
+.ser-form{
+    width: 40%;
+    height: fit-content;
+    margin: 5rem;
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    margin-right: 8rem;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+
+    & h1{
+        font-size: 3.8rem;
+        align-self: center;
+    }
+
+    & .input-field{
+        width: 100%;
+        height: fit-content;
+        display: flex;
+        flex-direction: column;
+        text-transform: capitalize;
+        font-size: 1.6rem;
+        gap: 1rem;
+
+        & label{
+            font-weight: 550;
+            font-size: 1.8rem;
+        }
+
+        & input, select{
+            width: 100%;
+            height: 4rem;
+            padding: 1rem;
+            font-size: 1.6rem;
+        }
+
+
+        & input[type="submit"]{
+            width: 40%;
+            height: 4.5rem;
+            align-self: flex-end;
+            border-radius: 1.2rem;
+            border: 0;background-color: var(--firstcolor);
+            font-size: 1.8rem;
+            text-transform: capitalize;
+            font-weight: 550;
+            transition: all .3s;
+            cursor: pointer;
+        }
+
+        & input[type="submit"]:hover{
+            scale: .99;
+            font-size: 1.79rem;
+            color: var(--secondcolor);
+        }
+
+
+    }
+
+    
+}

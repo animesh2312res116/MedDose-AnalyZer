@@ -25,7 +25,7 @@ Our mission is to enhance the lives of patients by simplifying the process of me
 ### Animesh
 - **Role:** Frontend Developer
 - **Email:** [animesh_2312res116@iitp.ac.in](animesh_2312res116@iitp.ac.in)
-- **Bio:** Animesh has learned HTML, CSS, and is currently mastering JavaScript. He has  structure of our website and is filtering the provided data from the backend and uploading to platform.
+- **Bio:** Animesh has learned HTML, CSS, and is currently mastering JavaScript. He has structured our website and is filtering the provided data from the backend and uploading to platform.
 
 ### Rishabh Mishra
 - **Role:** Backend Developer

@@ -22,11 +22,6 @@ Our mission is to enhance the lives of patients by simplifying the process of me
 
 ## Developers
 
-### Kajal Kumari
-- **Role:** Frontend Developer
-- **Email:** [kajal_2312res801@iitp.ac.in](mailto:kajal_2312res801@iitp.ac.in)
-- **Bio:** Kajal is focused on designing the service section of our platform. With a keen eye for detail and a passion for creating user-friendly interfaces, she is instrumental in making our website accessible and easy to navigate.
-
 ### Animesh
 - **Role:** Frontend Developer
 - **Email:** [animesh_2312res116@iitp.ac.in](animesh_2312res116@iitp.ac.in)

@@ -87,7 +87,7 @@ header {
 
 section {
     width: 100%;
-    height: 90vh;
+    height: fit-content;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -376,7 +376,7 @@ footer {
 
 .dev {
     width: 100%;
-    height: fit-content;
+    height: 100vh;
     padding: 5rem;
     display: flex;
     flex-direction: column;
@@ -392,23 +392,24 @@ footer {
     }
 
     & .card-container {
-        width:90%;
+        width: 90%;
         height: 100%;
-        padding: 5rem 10rem;
+        /* padding: 5rem 10rem;
         padding-top: 10rem;
-        padding-left: 1rem;
+        padding-left: 1rem; */
         display: flex;
+        justify-content: center;
+        align-items: center;
         gap: 5rem;
-        overflow-x: scroll;
-        scrollbar-width: none;
+        /* overflow-x: scroll;
+        scrollbar-width: none; */
         /* flex-wrap: nowrap; */
-        
 
 
         & .card {
             /* margin: 0 rem; */
             scroll-snap-align: center;
-            min-width: 250px;
+            width: 300px;
             aspect-ratio: .8;
             padding: 2rem;
             box-shadow: rgba(0, 0, 0, 0.24) 5px 4px 10px 8px;
@@ -447,17 +448,18 @@ footer {
         }
 
         & .card:hover {
-            box-shadow: rgba(0, 0, 0, 0.24) 5px 4px 20px 8px;   
+            box-shadow: rgba(0, 0, 0, 0.24) 5px 4px 20px 8px;
         }
     }
 }
 
 .btn {
+    display: none;
     font-size: 2rem;
-    width:5rem;
+    width: 5rem;
     aspect-ratio: 1;
     border-radius: 50%;
-    position:absolute;
+    position: absolute;
     color: var(--firstcolor);
     top: 50%;
     z-index: 10;
@@ -466,41 +468,41 @@ footer {
     cursor: pointer;
     margin: 0 2.5rem;
 }
-.prev{
+
+.prev {
     left: 0%;
 }
-.nex{
+
+.nex {
     right: 0%;
 }
 
 
 /* ==============================service page ======== */
-.service-sec{
+.service-sec {
     width: 100vw;
-    height: 80vh;
+    height: 95vh;
     display: flex;
     flex-direction: row-reverse;
-    justify-content: center;
-    align-items: center;
     justify-content: space-between;
     align-items: center;
 }
 
-.image{
+.image {
     width: 50%;
     height: 100%;
     overflow: hidden;
 
-    & img{
+    & img {
         transform: translateY(-2%);
         width: 100%;
         aspect-ratio: 1;
     }
 }
 
-.ser-form{
+.ser-form {
     width: 40%;
-    height: 95%;
+    height: fit-content;
     margin: 3rem;
     padding: 3rem;
     display: flex;
@@ -509,12 +511,12 @@ footer {
     margin-right: 8rem;
     box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
 
-    & h1{
+    & h1 {
         font-size: 3.8rem;
         align-self: center;
     }
 
-    & .input-field{
+    & .input-field {
         width: 100%;
         height: fit-content;
         display: flex;
@@ -523,25 +525,34 @@ footer {
         font-size: 1.6rem;
         gap: 1rem;
 
-        & label{
+        & label {
             font-weight: 550;
             font-size: 1.8rem;
         }
 
-        & input, select{
+        & input,
+        select,
+        textarea {
             width: 100%;
             height: 4rem;
             padding: 1rem;
             font-size: 1.6rem;
+            text-transform: capitalize;
+        }
+
+        & textarea {
+            height: 6rem;
+            display: none;
         }
 
 
-        & input[type="submit"]{
-            width: 40%;
+        & input[type="submit"] {
+            width: 30%;
             height: 4.5rem;
             align-self: flex-end;
             border-radius: 1.2rem;
-            border: 0;background-color: var(--firstcolor);
+            border: 0;
+            background-color: var(--firstcolor);
             font-size: 1.8rem;
             text-transform: capitalize;
             font-weight: 550;
@@ -549,7 +560,7 @@ footer {
             cursor: pointer;
         }
 
-        & input[type="submit"]:hover{
+        & input[type="submit"]:hover {
             scale: .99;
             font-size: 1.79rem;
             color: var(--secondcolor);
@@ -558,5 +569,61 @@ footer {
 
     }
 
-    
+
+}
+
+.person-details {
+    width: 50%;
+    height: 90% ;
+    margin: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    gap: 1rem;
+    align-items: center;
+    padding: 1rem;
+
+    & h2 {
+        width: 100%;
+        height: 4rem;
+        text-transform: capitalize;
+        font-size: 2.2rem;
+        padding-left: 4rem;
+    }
+
+    & h1 {
+        width: 100%;
+        height: 5rem;
+        text-transform: capitalize;
+        font-size: 3rem;
+        text-align: center;
+        text-decoration: underline;
+    }
+
+    & p {
+        width: 100%;
+        text-align: justify;
+        font-size: 1.6rem;
+        padding-left: 2rem;
+    }
+
+    & .print {
+        width: 20%;
+        height: 4rem;
+        align-self: flex-end;
+        border-radius: .6rem;
+        border: 0;
+        background-color: var(--firstcolor);
+        font-size: 1.8rem;
+        text-transform: capitalize;
+        font-weight: 550;
+        transition: all .3s;
+        cursor: pointer;
+    }
+
+    & .print:hover {
+        scale: .99;
+        font-size: 1.79rem;
+        color: var(--secondcolor);
+    }
 }

@@ -17,7 +17,7 @@ const html = `<form class="ser-form" id="form2">
     <input type="number" name="age" id="" placeholder="Enter your Age" required>
 </div>
 <div class="input-field">
-    <label for="">height (in feet):</label>
+    <label for="">height (in cm):</label>
     <input type="number" name="ht" id="" placeholder="Enter your height" required>
 </div>
 <div class="input-field">
@@ -28,19 +28,19 @@ const html = `<form class="ser-form" id="form2">
     <label for="">Blood Group:</label>
     <select required name='bdg'>
         <option value="">Select</option>
-        <option value="">A+</option>
-        <option value="">A-</option>
-        <option value="">B+</option>
-        <option value="">B-</option>
-        <option value="">AB+</option>
-        <option value="">AB-</option>
-        <option value="">O+</option>
-        <option value="">O-</option>
+        <option value="A+">A+</option>
+        <option value="A-">A-</option>
+        <option value="B+">B+</option>
+        <option value="B-">B-</option>
+        <option value="AB+">AB+</option>
+        <option value="AB-">AB-</option>
+        <option value="O+">O+</option>
+        <option value="O-">O-</option>
     </select>
 </div>
 <div class="input-field">
     <label for="">Blood Pressure (e.g., 120/80):</label>
-    <input type="number" name="bdp" id="" placeholder="Enter your Blood Preasure" required>
+    <input type="text" name="bdp" id="" placeholder="Enter your Blood Preasure like 120/80" required>
 </div>
 <div class="input-field">
     <input type="submit" >
@@ -70,6 +70,7 @@ form1.addEventListener('submit', (e) => {
     detail.name = formdata.get("name")
     detail.Gender = formdata.get("gender")
     detail.SelectProblem = formdata.get("problem")
+    detail.AnyExtraMedication = formdata.get("extra")
     console.log(detail)
     detailForm.innerHTML = html
 

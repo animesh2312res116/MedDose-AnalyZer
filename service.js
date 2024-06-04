@@ -94,11 +94,38 @@ const nextform = (e) => {
     detail.bloodPreasure = formdata.get("bdp")
     console.log(detail)
 
-    detailForm.innerHTML = `<div class="image"><img src="./images/vecteezy_expert-and-caring-doctor-women-skilled-and-nurturing-models_22483927.png" alt=""></div>
-    <div class="person-details" id="doc"><h1>Medical Details Analysis</h1><h2>name : ${detail.name}</h2><h2>Age : ${detail.age}</h2><h2>Gender : ${detail.Gender}</h2><h2> height: ${detail.height}</h2><h2>weight : ${detail.weight}</h2><h2>bloodGroup: ${detail.bloodGroup}</h2><h2>bloodPreasure: ${detail.bloodPreasure} </h2><h2>Problem : ${detail.SelectProblem}</h2><hr style="width:100%;text-align:left;margin-left:0"><h1>Suggetion</h1><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere cum, eum ex voluptate sapiente voluptas beatae cumque ipsum accusamus a omnis, sequi fuga pariatur quia perferendis! Modi harum doloremque officia corrupti, repellat quam, minus id quae nisi, perspiciatis eaque nostrum ut ullam nulla aliquid  dignissimos quo? Veniam asperiores nesciunt enim aspernatur, odit aliquam animi alias, autem facilis</p><button class="print" id="btn">Print</button>`
+    detailForm.innerHTML = `<div class="image"><img style="width: 90%; aspect-ratio: 1; padding-left:30px;"
+    src="./images/vecteezy_expert-and-caring-doctor-women-skilled-and-nurturing-models_22483927.png" alt="">
+</div>
+<div class="person-details" id="doc">
+<h1>Medical Details Analysis</h1>
+<h2>name : ${detail.name}</h2>
+<h2>Age : ${detail.age}</h2>
+<h2>Gender : ${detail.Gender}</h2>
+<h2> height: ${detail.height}</h2>
+<h2>weight : ${detail.weight}</h2>
+<h2>bloodGroup: ${detail.bloodGroup}</h2>
+<h2>bloodPreasure: ${detail.bloodPreasure} </h2>
+<h2>Problem : ${detail.SelectProblem}</h2>
+<hr style="width:100%;text-align:left;margin-left:0">
+<h1>Suggetion</h1>
+<div style="width: 90%; font-weight: 500;">
+    <ul>
+        <li style="font-size:18px;margin-top: 10px; font-weight:550;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum quisquam,
+            perspiciatis voluptatum dolore ipsum a dolores sit provident ipsam veniam! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ad, quis nam. Mollitia quos debitis illum harum! Maiores voluptatibus a, ipsum, at quae cumque nesciunt ab, iure eligendi suscipit explicabo magni.</li>
+        <li style="font-size:18px; margin-top: 10px; font-weight:550;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum quisquam,
+            perspiciatis voluptatum dolore ipsum a dolores sit provident ipsam veniam!</li>
+        <li style="font-size:18px; margin-top: 10px; font-weight:550;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum quisquam,
+            perspiciatis voluptatum dolore ipsum a dolores sit provident ipsam veniam!</li>
+        <li style="font-size:16px; margin-top: 10px; font-weight:550;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum quisquam,
+            perspiciatis voluptatum dolore ipsum a dolores sit provident ipsam veniam!</li>
+    </ul>
+</div>
+<button class="print" id="btn">Print</button>
+</div>`
 
     const btn = document.getElementById('btn')
-    btn.addEventListener('click' , print)
+    btn.addEventListener('click', print)
 
 
 }
@@ -108,8 +135,7 @@ const print = () => {
     html2canvas(doc).then(function (canvas) {
         var imgData = canvas.toDataURL('image/png');
         var pdf = new jsPDF();
-        pdf.addImage(imgData, 'PNG', 3 , 3);
-        pdf.save('sample.pdf');
+        pdf.addImage(imgData, 'PNG', 3, 3);
+        pdf.save(detail.name);
     });
 }
-

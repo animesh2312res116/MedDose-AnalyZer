@@ -94,7 +94,7 @@ const nextform = (e) => {
     detail.bloodPreasure = formdata.get("bdp")
     console.log(detail)
 
-    detailForm.innerHTML = `<div class="image"><img style="width: 90%; aspect-ratio: 1; padding-left:30px;"
+    detailForm.innerHTML = `        <div class="image"><img style="width: 90%; aspect-ratio: 1; padding-left:30px;"
     src="./images/vecteezy_expert-and-caring-doctor-women-skilled-and-nurturing-models_22483927.png" alt="">
 </div>
 <div class="person-details" id="doc">
@@ -109,10 +109,10 @@ const nextform = (e) => {
 <h2>Problem : ${detail.SelectProblem}</h2>
 <hr style="width:100%;text-align:left;margin-left:0">
 <h1>Suggetion</h1>
-<div style="width: 90%; font-weight: 500;">
+<div style="width: 90%; height: fit-content; font-weight: 500;">
     <ul>
         <li style="font-size:18px;margin-top: 10px; font-weight:550;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum quisquam,
-            perspiciatis voluptatum dolore ipsum a dolores sit provident ipsam veniam! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ad, quis nam. Mollitia quos debitis illum harum! Maiores voluptatibus a, ipsum, at quae cumque nesciunt ab, iure eligendi suscipit explicabo magni.</li>
+            perspiciatis voluptatum dolore ipsum a dolores sit provident ipsam veniam! Lorem ipsum, dolor sit amet consectetur adipisicing elit. lorem100 Ad, quis nam. Mollitia quos debitis illum harum! Maiores voluptatibus a, ipsum, at quae cumque nesciunt ab, iure eligendi suscipit explicabo magni.</li>
         <li style="font-size:18px; margin-top: 10px; font-weight:550;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum quisquam,
             perspiciatis voluptatum dolore ipsum a dolores sit provident ipsam veniam!</li>
         <li style="font-size:18px; margin-top: 10px; font-weight:550;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum quisquam,
@@ -131,11 +131,25 @@ const nextform = (e) => {
 }
 
 const print = () => {
-    const doc = document.getElementById('doc')
-    html2canvas(doc).then(function (canvas) {
+    const doc = document.getElementById('doc');
+
+    html2canvas(doc, {
+        scale: 2,  // Increase the scale for better resolution
+        useCORS: true,  // Enable cross-origin resource sharing if your content includes external images
+        allowTaint: true,  // Allow cross-origin images to taint the canvas
+        logging: true,  // Enable logging for debugging purposes
+        scrollX: 0,  // Set scroll to 0 to avoid capturing the scroll position
+        scrollY: 0,
+        windowWidth: doc.scrollWidth,  // Use the full width of the content
+        windowHeight: doc.scrollHeight  // Use the full height of the content
+    }).then(function(canvas) {
         var imgData = canvas.toDataURL('image/png');
-        var pdf = new jsPDF();
-        pdf.addImage(imgData, 'PNG', 3, 3);
-        pdf.save(detail.name);
+        var pdf = new jsPDF({
+            orientation: 'p',  // 'p' for portrait, 'l' for landscape
+            unit: 'px',  // Set units to pixels
+            format: [canvas.width, canvas.height]  // Set format to match canvas size
+        });
+        pdf.addImage(imgData, 'PNG', 0, 0, canvas.width, canvas.height);
+        pdf.save('document.pdf');  // Save the PDF with a default name or use a dynamic name
     });
-}
+};

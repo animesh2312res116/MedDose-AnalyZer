@@ -481,11 +481,12 @@ footer {
 /* ==============================service page ======== */
 .service-sec {
     width: 100vw;
-    height: 95vh;
+    height: fit-content;
     display: flex;
     flex-direction: row-reverse;
     justify-content: space-between;
     align-items: center;
+    padding-block: 2rem;
 }
 
 .image {
@@ -574,7 +575,7 @@ footer {
 
 .person-details {
     width: 50%;
-    height: 90% ;
+    height: fit-content;
     margin: 2rem;
     display: flex;
     flex-direction: column;
@@ -582,6 +583,7 @@ footer {
     gap: 1rem;
     align-items: center;
     padding: 1rem;
+    padding-block: 3rem;
 
     & h2 {
         width: 100%;

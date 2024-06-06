@@ -47,7 +47,7 @@ const html = `<form class="ser-form" id="form2">
 </div>
 </form>
 <div class="image">
-<img src="./images/vecteezy_cute-doctor-women-compassionate-and-skilled-models-for_22484658.png" alt="">
+<img src="./images/vecteezy_cute-doctor-women-compassionate-and-skilled-models-for_22484658.webp" alt="">
 </div>`
 const detail = {
     name: "",
@@ -80,8 +80,6 @@ form1.addEventListener('submit', (e) => {
 
 
 
-const persondetails = `<div class="image"><img src="./images/vecteezy_cute-doctor-women-compassionate-and-skilled-models-for_22484658.png" alt=""></div>
-<div class="person-details" id="doc"><h1>Medical Details Analysis</h1><h2>name : ${detail.name}</h2><h2>Age : ${detail.age}</h2><h2>Gender : ${detail.Gender}</h2><h2> height: ${detail.height}</h2><h2>weight : ${detail.weight}</h2><h2>bloodGroup: ${detail.bloodGroup}</h2><h2>bloodPreasure: ${detail.bloodPreasure} </h2><h2>Problem : ${detail.SelectProblem}</h2><hr style="width:100%;text-align:left;margin-left:0"><h1>Suggetion</h1><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere cum, eum ex voluptate sapiente voluptas beatae cumque ipsum accusamus a omnis, sequi fuga pariatur quia perferendis! Modi harum doloremque officia corrupti, repellat quam, minus id quae nisi, perspiciatis eaque nostrum ut ullam nulla aliquid  dignissimos quo? Veniam asperiores nesciunt enim aspernatur, odit aliquam animi alias, autem facilis</p><button class="print" id="btn">Print</button>`
 
 const nextform = (e) => {
     e.preventDefault()
@@ -94,8 +92,8 @@ const nextform = (e) => {
     detail.bloodPreasure = formdata.get("bdp")
     console.log(detail)
 
-    detailForm.innerHTML = `        <div class="image"><img style="width: 90%; aspect-ratio: 1; padding-left:30px;"
-    src="./images/vecteezy_expert-and-caring-doctor-women-skilled-and-nurturing-models_22483927.png" alt="">
+    detailForm.innerHTML = `<div class="image"><img style="width: 90%; aspect-ratio: 1; padding-left:30px;"
+    src="./images/vecteezy_expert-and-caring-doctor-women-skilled-and-nurturing-models_22483927.webp" alt="">
 </div>
 <div class="person-details" id="doc">
 <h1>Medical Details Analysis</h1>
